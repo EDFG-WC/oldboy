@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
@@ -26,3 +27,8 @@
 .mvn/
 mvnw
 mvnw.cmd
+=======
+.idea/
+target/
+devlogs/
+>>>>>>> b986cb6242252f3a38ccd0f93f267cd97f098532
