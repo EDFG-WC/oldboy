@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: test
+#thymeleaf start
+  thymeleaf:
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    #开发时关闭缓存,不然没法看到实时页面
+    cache: false
+#thymeleaf end
+pocket:
+  name: 爹爹
+  age: 50
+  address: 你隔壁
+
+#多个环境的配置用---隔开
+---
+spring:
+  profiles: dev
+server:
+  port: 8080
+---
+spring:
+  profiles: test
+server:
+  port: 8090

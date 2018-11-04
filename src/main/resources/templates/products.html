@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+</head>
+<body>
+<div>
+  <table width="100%" border="1" cellspacing="1" cellpadding="0">
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>PRICE</th>
+      <th>CREATETIME</th>
+      <th>DETAIL</th>
+    </tr>
+    <tr th:each="prod : ${productList}" th:class="${prodStat.odd}? 'odd'">
+      <td th:text="${prod.id}"></td>
+      <td th:text="${prod.name}"></td>
+      <td th:text="${prod.price}"></td>
+      <td th:text="${prod.createTime}"></td>
+      <td th:text="${prod.remarks}"></td>
+      <!--<td>
+        <span th:text="${#lists.size(prod.comments)}">2</span> comment/s
+        <a href="comments.html"
+           th:href="@{/product/comments(prodId=${prod.id})}"
+           th:unless="${#lists.isEmpty(prod.comments)}">view</a>
+      </td>-->
+    </tr>
+  </table>
+</div>
+</body>
+</html>
