@@ -7,12 +7,11 @@ import org.springframework.stereotype.Component;
 /**
  * @Auther: wangc
  * @Date: 2018/10/24 22:00
- * @Description:
+ * @Description: 这种拿配置文件的类 切记不能写构造方法
  */
 @Component
-@ConfigurationProperties(prefix = "test")
-@PropertySource("classpath:haha.yml")
-public class HahaEn {
+@ConfigurationProperties(prefix = "bastard")
+public class BaiduEntity {
 
     private String name;
 

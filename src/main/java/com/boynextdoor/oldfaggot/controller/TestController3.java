@@ -1,6 +1,6 @@
 package com.boynextdoor.oldfaggot.controller;
 
-import com.boynextdoor.oldfaggot.entity.HahaEn;
+import com.boynextdoor.oldfaggot.entity.BaiduEntity;
 import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController3 {
 
     @Resource
-    private HahaEn hahaEn;
+    private BaiduEntity baiduEntity;
 
-    @GetMapping("/haha")
-    public HahaEn getHaha() {
-        return hahaEn;
+    @GetMapping("/baidu")
+    public BaiduEntity getHaha() {
+        return baiduEntity;
     }
 }
