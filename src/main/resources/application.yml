@@ -1,7 +1,7 @@
 spring:
   profiles:
     active: test
-#thymeleaf start
+  #thymeleaf start
   thymeleaf:
     mode: LEGACYHTML5
     encoding: UTF-8
@@ -9,10 +9,6 @@ spring:
     cache: false
 #thymeleaf end
 spring.profiles.include: 'bean'
-pocket:
-  name: 爹爹
-  age: 50
-  address: 你隔壁
 
 #多个环境的配置用---隔开
 ---

@@ -13,11 +13,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController3 {
 
-    @Resource
-    private BaiduEntity baiduEntity;
-
-    @GetMapping("/baidu")
-    public BaiduEntity getHaha() {
-        return baiduEntity;
-    }
 }

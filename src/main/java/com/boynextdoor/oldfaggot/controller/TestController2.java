@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Description: 使用@Controller注解, 不会把返回值成json, 返回的hello会指向hello.html
  */
 @Controller
+@RequestMapping("/test2")
 public class TestController2 {
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String sayHello(Model model) {
-        model.addAttribute("name", "老王");
-        return "hello";
-    }
+  @RequestMapping(value = "/hello", method = RequestMethod.GET)
+  public String sayHello(Model model) {
+    model.addAttribute("name", "老王");
+    return "hello";
+  }
 
 }

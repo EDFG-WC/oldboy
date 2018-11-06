@@ -10,25 +10,27 @@ import org.springframework.stereotype.Component;
  * @Description: 一开始是打算弄一个yml文件来读取的, 但好像失败了
  */
 @Component
-@PropertySource("classpath:test.properties")
-@ConfigurationProperties(prefix = "test")
+@PropertySource("classpath:bean.properties")
+@ConfigurationProperties(prefix = "bean")
 public class TestEntity {
-    private String name;
-    private String url;
 
-    public String getName() {
-        return name;
-    }
+  private String name;
+  private String url;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public String getUrl() {
-        return url;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
 }
