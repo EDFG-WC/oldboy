@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description:
  */
 @RestController
-@RequestMapping("/init")
+@RequestMapping("/test4")
 public class TestController4 {
 
 }

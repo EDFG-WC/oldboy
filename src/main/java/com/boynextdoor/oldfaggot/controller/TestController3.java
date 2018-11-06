@@ -3,6 +3,7 @@ package com.boynextdoor.oldfaggot.controller;
 import com.boynextdoor.oldfaggot.entity.BaiduEntity;
 import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description:
  */
 @RestController
+@RequestMapping("/test3")
 public class TestController3 {
 
 }
