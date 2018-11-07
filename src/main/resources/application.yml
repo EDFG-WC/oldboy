@@ -1,15 +1,19 @@
+#选择项目运行环境
 spring:
   profiles:
     active: test
-  #thymeleaf start
+#thymeleaf start
   thymeleaf:
     mode: LEGACYHTML5
     encoding: UTF-8
     #开发时关闭缓存,不然没法看到实时页面
     cache: false
 #thymeleaf end
+
+#引入另外的yml文件
 spring.profiles.include: 'bean'
 
+#
 #多个环境的配置用---隔开
 ---
 spring:

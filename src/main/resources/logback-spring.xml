@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false" scan="true" scanPeriod="60 seconds">
-  <contextName>demo</contextName>
-  <property name="log.path" value="E:\dev\logs"/>
-  <property name="log.name" value="demo"/>
+  <contextName>LOGS</contextName><!--这个名字会打印在日志里的时间后面-->
+  <property name="log.path" value="E:\\dev\\logs"/>
+  <property name="log.name" value="logback"/>
 
   <!--输出到控制台-->
   <appender class="ch.qos.logback.core.ConsoleAppender" name="console">
+    <!--临界值过滤器，过滤掉低于指定临界值的日志。当日志级别等于或高于临界值时，过滤器返回NEUTRAL；当日志级别低于临界值时，日志会被拒绝。不用就关掉-->
     <!-- <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
          <level>ERROR</level>
      </filter>-->
+    <!--控制台的日志输入格式-->
     <encoder>
       <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
@@ -16,9 +18,13 @@
 
   <!--输出到文件-->
   <appender class="ch.qos.logback.core.rolling.RollingFileAppender" name="file">
+    <!--滚动策略, 最受欢迎的是TimeBasedRollingPolicy-->
     <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+      <!--日志文件命名方式: 日志路径/日志名字.年月日.序号.log-->
       <fileNamePattern>${log.path}/${log.name}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      <!--文件容量上限-->
       <maxFileSize>1MB</maxFileSize>
+      <!--日志保留时间-->
       <maxHistory>30</maxHistory>
     </rollingPolicy>
     <encoder>
@@ -26,13 +32,16 @@
     </encoder>
   </appender>
 
+  <!--必选节点, 用来指定最基础指定的日志输入级别, ref的值对应的是appender的name属性-->
   <root level="INFO">
     <appender-ref ref="console"/>
     <appender-ref ref="file"/>
   </root>
 
-  <logger additivity="false" level="DEBUG" name="com.example.demo.mapper">
+  <!--对某个路径下的日志进行设置, name用来指定日志的范围某个类或者某个包, level是日志的输出级别, additivity:是否向上级loger传递打印信息, 默认是true.-->
+  <logger additivity="false" level="INFO" name="com.boynextdoor.oldfaggot.controller.TestController3">
     <appender-ref ref="console"/>
+    <appender-ref ref="file"/>
   </logger>
 
   <!-- 测试环境+开发环境. -->
