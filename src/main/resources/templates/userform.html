@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>userform</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <!-- main JS libs -->
+  <script src="../static/vanilla-cream-css/js/libs/modernizr.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/modernizr.min.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/jquery-1.10.0.js"
+          th:src="@{/vanilla-cream-css/js/libs/jquery-1.10.0.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/jquery-ui.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/jquery-ui.min.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/bootstrap.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/bootstrap.min.js}"></script>
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="../static/vanilla-cream-css/css/bootstrap.css"
+        th:href="@{/vanilla-cream-css/css/bootstrap.css}"/>
+  <link rel="stylesheet" href="../static/vanilla-cream-css/style.css"
+        th:href="@{/vanilla-cream-css/style.css}"/>
+  <!-- scripts -->
+  <script src="../static/vanilla-cream-css/js/general.js"
+          th:src="@{/vanilla-cream-css/js/general.js}"></script>
+</head>
+<body>
+<h1 th:text="${username}">Hello World</h1>
+<h1>获取对象信息</h1>
+<h2>1、通过直接访问对象的方式</h2>
+<p th:text="${user.name}"></p>
+<p th:text="${user.age}"></p>
+<p th:text="${user.address}"></p>
+
+<h2>2、通过th:object访问对象的方式</h2>
+<div th:object="${user}">
+  <p th:text="*{name}"></p>
+  <p th:text="*{age}"></p>
+  <p th:text="*{address}"></p>
+</div>
+
+<h1>表单提交</h1>
+<!-- 表单提交用户信息,注意字段的设置,直接是*{} -->
+<form action="#" th:action="@{/test4/add}" th:object="${user}" method="post">
+  <input type="text" th:field="*{name}"/>
+  <input type="text" th:field="*{age}"/>
+  <input type="text" th:field="*{address}"/>
+  <input type="submit"/>
+</form>
+</body>
+</html>

@@ -4,10 +4,19 @@ spring:
     active: test
 #thymeleaf start
   thymeleaf:
+    #静态资源前缀
+    prefix: classpath:/templates/
+    #静态资源后缀
+    suffix: .html
+    #去除thymeleaf的严格校验
     mode: LEGACYHTML5
+    #页面编码格式
     encoding: UTF-8
     #开发时关闭缓存,不然没法看到实时页面
     cache: false
+    #文档MIME类型
+    servlet:
+      content-type: text/html
 #thymeleaf end
 
 #引入另外的yml文件
