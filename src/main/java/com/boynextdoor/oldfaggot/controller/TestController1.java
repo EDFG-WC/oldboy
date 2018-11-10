@@ -18,32 +18,32 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/test1")
 public class TestController1 {
 
-  @Resource
-  private User user;
+    @Resource
+    private User user;
 
-  @Resource
-  private BaiduEntity baiduEntity;
+    @Resource
+    private BaiduEntity baiduEntity;
 
-  @Resource
-  private TestEntity testEntity;
+    @Resource
+    private TestEntity testEntity;
 
-  @GetMapping("/getUser")
-  @ResponseBody
-  public String firstEntrance() {
-    return "大家好，我的名字是" + user.getName() + "，我今年" + user.getAge() + "岁了，我住在" + user.getAddress()
-        + "！";
-  }
+    @GetMapping("/getUser")
+    @ResponseBody
+    public String firstEntrance() {
+        return "大家好，我的名字是" + user.getName() + "，我今年" + user.getAge() + "岁了，我住在" + user.getAddress()
+            + "！";
+    }
 
-  @GetMapping("/getBaidu")
-  @ResponseBody
-  public BaiduEntity getHaha() {
-    return baiduEntity;
-  }
+    @GetMapping("/getBaidu")
+    @ResponseBody
+    public BaiduEntity getHaha() {
+        return baiduEntity;
+    }
 
-  @GetMapping("/xmlTest")
-  @ResponseBody
-  public TestEntity myTest() {
-    return testEntity;
-  }
+    @GetMapping("/xmlTest")
+    @ResponseBody
+    public TestEntity myTest() {
+        return testEntity;
+    }
 
 }

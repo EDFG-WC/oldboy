@@ -2,7 +2,7 @@
 spring:
   profiles:
     active: test
-#thymeleaf start
+  #thymeleaf start
   thymeleaf:
     #静态资源前缀
     prefix: classpath:/templates/
@@ -19,7 +19,7 @@ spring:
       content-type: text/html
 #thymeleaf end
 
-#引入另外的yml文件
+#引入其他的yml文件
 spring.profiles.include: 'bean'
 
 #

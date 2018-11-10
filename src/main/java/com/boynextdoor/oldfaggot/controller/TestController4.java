@@ -16,21 +16,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/test4")
 public class TestController4 {
 
-  @GetMapping("/goToUserForm")
-  public String goToUserForm(Model model) {
-    User user = new User();
-    user.setName("张三");
-    user.setAge(29);
-    user.setAddress("忠孝东路");
-    model.addAttribute("user",user);
-    model.addAttribute("username","入门案例");
-    return "userform";
-  }
+    @GetMapping("/goToUserForm")
+    public String goToUserForm(Model model) {
+        User user = new User();
+        user.setName("张三");
+        user.setAge(29);
+        user.setAddress("忠孝东路");
+        model.addAttribute("user", user);
+        model.addAttribute("username", "入门案例");
+        return "userform";
+    }
 
-  @PostMapping("/add")
-  public String getUser(User user) {
-    System.out.println("----------------------"+user);
-    return "success";
-  }
+    @PostMapping("/add")
+    public String getUser(User user) {
+        System.out.println("----------------------" + user);
+        return "success";
+    }
 
 }

@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/test2")
 public class TestController2 {
 
-  @RequestMapping(value = "/hello", method = RequestMethod.GET)
-  public String sayHello(Model model) {
-    model.addAttribute("name", "老王");
-    return "hello";
-  }
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String sayHello(Model model) {
+        model.addAttribute("name", "老王");
+        return "hello";
+    }
 
 }
