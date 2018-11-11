@@ -2,7 +2,7 @@ package com.boynextdoor.oldfaggot.controller;
 
 import com.boynextdoor.oldfaggot.entity.BaiduEntity;
 import com.boynextdoor.oldfaggot.entity.TestEntity;
-import com.boynextdoor.oldfaggot.entity.User;
+import com.boynextdoor.oldfaggot.entity.Fucker;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class TestController1 {
 
     @Resource
-    private User user;
+    private Fucker fucker;
 
     @Resource
     private BaiduEntity baiduEntity;
@@ -30,7 +30,7 @@ public class TestController1 {
     @GetMapping("/getUser")
     @ResponseBody
     public String firstEntrance() {
-        return "大家好，我的名字是" + user.getName() + "，我今年" + user.getAge() + "岁了，我住在" + user.getAddress()
+        return "大家好，我的名字是" + fucker.getName() + "，我今年" + fucker.getAge() + "岁了，我住在" + fucker.getAddress()
             + "！";
     }
 

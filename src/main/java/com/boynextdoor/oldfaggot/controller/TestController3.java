@@ -1,7 +1,7 @@
 package com.boynextdoor.oldfaggot.controller;
 
 
-import com.boynextdoor.oldfaggot.entity.User;
+import com.boynextdoor.oldfaggot.entity.Fucker;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
@@ -37,10 +37,10 @@ public class TestController3 {
         String address = request.getParameter("address");
         if (!name.equals("") && address != "") {
             //User user =new User(userName,password);
-            User user = new User();
-            user.setName(name);
-            user.setAddress(address);
-            request.getSession().setAttribute("user", user);
+            Fucker fucker = new Fucker();
+            fucker.setName(name);
+            fucker.setAddress(address);
+            request.getSession().setAttribute("user", fucker);
             map.put("result", "1");
         } else {
             map.put("result", "0");

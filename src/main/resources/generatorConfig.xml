@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <!-- 导入配置属性 -->
+  <properties resource="application.yml"/>
+  <!-- mysql驱动的位置 -->
+  <classPathEntry
+    location="D:\dev\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar"/>
+  <!-- id随便取, targetRuntime是固定的 -->
+  <context id="Tables" targetRuntime="MyBatis3">
+
+    <!-- 注释 -->
+    <commentGenerator>
+      <!-- 是否生成注释代时间戳 -->
+      <property name="suppressDate" value="true"/>
+      <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+      <property name="suppressAllComments" value="true"/>
+    </commentGenerator>
+
+    <!-- JDBC连接 -->
+    <jdbcConnection
+      connectionURL="jdbc:mysql://localhost:3306/pinyougoudb?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true"
+      driverClass="com.mysql.jdbc.Driver"
+      userId="root"
+      password="123">
+    </jdbcConnection>
+
+    <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
+    <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为true时把JDBC DECIMAL 和
+     NUMERIC 类型解析为java.math.BigDecimal -->
+    <javaTypeResolver>
+      <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
+      <property name="forceBigDecimals" value="false"/>
+    </javaTypeResolver>
+
+    <!-- 生成实体类地址 -->
+    <javaModelGenerator targetPackage="com.boynextdoor.oldfaggot.entity" targetProject="src/main/java">
+      <!-- 从数据库返回的值被清理前后的空格 -->
+      <property name="trimStrings" value="true"/>
+      <!-- enableSubPackages:是否让schema作为包的后缀 -->
+      <property name="enableSubPackages" value="false"/>
+    </javaModelGenerator>
+
+    <!-- 生成mapper xml文件 -->
+    <sqlMapGenerator targetPackage="com.boynextdoor.oldfaggot.dao.mapper.xmls" targetProject="src/main/java">
+      <!-- enableSubPackages:是否让schema作为包的后缀 -->
+      <property name="enableSubPackages" value="false"/>
+    </sqlMapGenerator>
+
+    <!-- 生成mapper xml对应Client(接口)-->
+    <javaClientGenerator targetPackage="com.boynextdoor.oldfaggot.dao" targetProject="src/main/java"
+      type="XMLMAPPER">
+      <!-- enableSubPackages:是否让schema作为包的后缀 -->
+      <property name="enableSubPackages" value="false"/>
+    </javaClientGenerator>
+
+    <!-- 配置表信息 -->
+    <!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample
+        是否生成 example类 table标签可以写多个 -->
+
+    <table domainObjectName="Address" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_address">
+    </table>
+    <table domainObjectName="Areas" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_areas">
+    </table>
+    <table domainObjectName="Brand" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_brand">
+    </table>
+    <table domainObjectName="Cities" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_cities">
+    </table>
+    <table domainObjectName="Content" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_content">
+    </table>
+    <table domainObjectName="ContentCategory" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_content_category">
+    </table>
+    <table domainObjectName="Goods" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_goods">
+    </table>
+    <table domainObjectName="GoodsDesc" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_goods_desc">
+    </table>
+    <table domainObjectName="Item" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_item">
+    </table>
+    <table domainObjectName="ItemCat" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_item_cat">
+    </table>
+    <table domainObjectName="Order" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_order">
+    </table>
+    <table domainObjectName="OrderItem" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_order_item">
+    </table>
+    <table domainObjectName="PayLog" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_pay_log">
+    </table>
+    <table domainObjectName="Provinces" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_provinces">
+    </table>
+    <table domainObjectName="SeckillGoods" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_seckill_goods">
+    </table>
+    <table domainObjectName="SeckillOrder" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_seckill_order">
+    </table>
+    <table domainObjectName="Seller" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_seller">
+    </table>
+    <table domainObjectName="Specification" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_specification">
+    </table>
+    <table domainObjectName="Specification" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_specification">
+    </table>
+    <table domainObjectName="SpecificationOption" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_specification_option">
+    </table>
+    <table domainObjectName="SpecificationOption" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_type_template">
+    </table>
+    <table domainObjectName="TypeTemplate" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_type_template">
+    </table>
+    <table domainObjectName="User" enableCountByExample="true"
+      enableDeleteByExample="true" enableSelectByExample="true"
+      enableUpdateByExample="true" schema="pinyougoudb"
+      tableName="tb_user">
+    </table>
+  </context>
+</generatorConfiguration>

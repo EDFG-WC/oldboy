@@ -17,8 +17,12 @@ spring:
     #文档MIME类型
     servlet:
       content-type: text/html
-#thymeleaf end
-
+  #thymeleaf end
+  datasource:
+    url: jdbc:mysql://localhost:3306/pinyougoudb?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
 #引入其他的yml文件
 spring.profiles.include: 'bean'
 

@@ -1,6 +1,6 @@
 package com.boynextdoor.oldfaggot.controller;
 
-import com.boynextdoor.oldfaggot.entity.User;
+import com.boynextdoor.oldfaggot.entity.Fucker;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,18 +18,18 @@ public class TestController4 {
 
     @GetMapping("/goToUserForm")
     public String goToUserForm(Model model) {
-        User user = new User();
+        Fucker fucker = new Fucker();
         /*user.setName("张三");
         user.setAge(29);
         user.setAddress("忠孝东路");*/
-        model.addAttribute("user", user);
+        model.addAttribute("user", fucker);
         model.addAttribute("username", "入门案例");
         return "userform";
     }
 
     @PostMapping("/add")
-    public String getUser(User user) {
-        System.out.println("----------------------" + user);
+    public String getUser(Fucker fucker) {
+        System.out.println("----------------------" + fucker);
         return "success";
     }
 
