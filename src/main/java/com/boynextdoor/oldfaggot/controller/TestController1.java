@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * @Auther: wangc
  * @Date: 2018/10/24 22:54
- * @Description: 第一个测试类, @RestController注解默认把值返回为json
+ * @Description: 第一个测试类, 用来用来读取xml和yml文件里的配置
  */
 @Controller
 @RequestMapping("/test1")

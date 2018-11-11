@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * @Auther: wangc
  * @Date: 2018/10/21 20:47
- * @Description:
+ * @Description: 测试页面, 把user对象带到页面.
  */
 @Controller
 @RequestMapping("/test4")
@@ -19,9 +19,9 @@ public class TestController4 {
     @GetMapping("/goToUserForm")
     public String goToUserForm(Model model) {
         User user = new User();
-        user.setName("张三");
+        /*user.setName("张三");
         user.setAge(29);
-        user.setAddress("忠孝东路");
+        user.setAddress("忠孝东路");*/
         model.addAttribute("user", user);
         model.addAttribute("username", "入门案例");
         return "userform";

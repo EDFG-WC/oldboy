@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>mytest1</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <!-- main JS libs -->
+  <script src="../static/vanilla-cream-css/js/libs/modernizr.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/modernizr.min.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/jquery-1.10.0.js"
+          th:src="@{/vanilla-cream-css/js/libs/jquery-1.10.0.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/jquery-ui.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/jquery-ui.min.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/bootstrap.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/bootstrap.min.js}"></script>
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="../static/vanilla-cream-css/css/bootstrap.css"
+        th:href="@{/vanilla-cream-css/css/bootstrap.css}"/>
+  <link rel="stylesheet" href="../static/vanilla-cream-css/style.css"
+        th:href="@{/vanilla-cream-css/style.css}"/>
+  <!-- scripts -->
+  <script src="../static/vanilla-cream-css/js/general.js"
+          th:src="@{/vanilla-cream-css/js/general.js}"></script>
+  <script>
+    function sendJson() {
+      $.ajax({
+        url: "/test5/ajaxTest",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(search),
+        dataType: 'json',
+        cache: false,
+        timeout: 600000,
+        success: function (data) {
+          var json = "<h4>Ajax Response</h4><pre>"
+              + JSON.stringify(data, null, 4) + "</pre>";
+          $('#feedback').html(json);
+          console.log("SUCCESS : ", data);
+          $("#btn-search").prop("disabled", false);
+        },
+        error: function (e) {
+          var json = "<h4>Ajax Response</h4><pre>"
+              + e.responseText + "</pre>";
+          $('#feedback').html(json);
+          console.log("ERROR : ", e);
+          $("#btn-search").prop("disabled", false);
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+<h1>表单提交</h1>
+<!-- 表单提交用户信息,注意字段的设置,直接是*{} -->
+<form action="#" th:action="@{/test5/add}" th:object="${user}" method="post">
+  <input type="text" th:field="*{name}"/>
+  <input type="text" th:field="*{age}"/>
+  <input type="text" th:field="*{address}"/>
+  <input type="submit"/>
+</form>
+</body>
+</html>

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * @Auther: wangc
  * @Date: 2018/10/24 22:00
- * @Description:
+ * @Description: 测试日志输出级别
  */
 @Controller
 @RequestMapping("/test3")

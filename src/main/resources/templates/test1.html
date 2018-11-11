@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>mytest1</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <!-- main JS libs -->
+  <script src="../static/vanilla-cream-css/js/libs/modernizr.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/modernizr.min.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/jquery-1.10.0.js"
+          th:src="@{/vanilla-cream-css/js/libs/jquery-1.10.0.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/jquery-ui.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/jquery-ui.min.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/bootstrap.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/bootstrap.min.js}"></script>
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="../static/vanilla-cream-css/css/bootstrap.css"
+        th:href="@{/vanilla-cream-css/css/bootstrap.css}"/>
+  <link rel="stylesheet" href="../static/vanilla-cream-css/style.css"
+        th:href="@{/vanilla-cream-css/style.css}"/>
+  <!-- scripts -->
+  <script src="../static/vanilla-cream-css/js/general.js"
+          th:src="@{/vanilla-cream-css/js/general.js}"></script>
+  <script>
+    /*function sendJson() {
+      $.ajax({
+        url: ""
+      });
+    }*/
+  </script>
+</head>
+<body>
+<table width="100%" border="1" cellspacing="1" cellpadding="0">
+  <tr>
+    <td>姓名</td>
+    <td>年龄</td>
+    <td>住址</td>
+  </tr>
+<!--  <tr th:object="basicReturn.basicData">
+    <td th:text="*{name}"></td>
+    <td th:text="*{age}"></td>
+    <td th:text="*{address}"></td>
+  </tr>-->
+  <!--  <tr th:each="ResourceComsumeUser : ${resourceComsumeUser.getContent()}"
+        th:id="${ResourceComsumeUser.getUserID()}">
+      <td th:text="${ResourceComsumeUser.getID()}">1</td>
+      <td th:text="${ResourceComsumeUser.getUsedTimes()}"><a href="#">Business management</a></td>
+      <td th:text="${ResourceComsumeUser.getText()}">31</td>
+      <td th:text="${ResourceComsumeUser.getTime()}/1000">json</td>
+    </tr>-->
+
+  <tr th:each="user : ${basicReturn.basicData}">
+    <td th:text="${user.getName()}">1234567</td>
+    <td th:text="${user.getAge()}">1234567</td>
+    <td th:text="${user.getAddress()}">1234567</td>
+  </tr>
+
+</table>
+</body>
+</html>
