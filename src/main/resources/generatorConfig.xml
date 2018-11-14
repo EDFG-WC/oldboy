@@ -8,7 +8,7 @@
   <properties resource="application.yml"/>
   <!-- mysql驱动的位置 -->
   <classPathEntry
-    location="D:\dev\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar"/>
+    location="E:\dev\repository_pinyougou\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar"/>
   <!-- id随便取, targetRuntime是固定的 -->
   <context id="Tables" targetRuntime="MyBatis3">
 
@@ -45,13 +45,13 @@
     </javaModelGenerator>
 
     <!-- 生成mapper xml文件 -->
-    <sqlMapGenerator targetPackage="com.boynextdoor.oldfaggot.dao.mapper.xmls" targetProject="src/main/java">
+    <sqlMapGenerator targetPackage="com.boynextdoor.oldfaggot.mapper.xml" targetProject="src/main/java">
       <!-- enableSubPackages:是否让schema作为包的后缀 -->
       <property name="enableSubPackages" value="false"/>
     </sqlMapGenerator>
 
     <!-- 生成mapper xml对应Client(接口)-->
-    <javaClientGenerator targetPackage="com.boynextdoor.oldfaggot.dao" targetProject="src/main/java"
+    <javaClientGenerator targetPackage="com.boynextdoor.oldfaggot.mapper" targetProject="src/main/java"
       type="XMLMAPPER">
       <!-- enableSubPackages:是否让schema作为包的后缀 -->
       <property name="enableSubPackages" value="false"/>
