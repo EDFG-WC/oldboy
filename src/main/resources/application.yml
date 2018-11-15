@@ -18,12 +18,12 @@ spring:
     servlet:
       content-type: text/html
   #thymeleaf end
-datasource:
-  username: root
-  password: 123
-  driver-class-name: com.mysql.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/pinyougoudb
-  type: com.alibaba.druid.pool.DruidDataSource
+  datasource:
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pinyougoudb
+    type: com.alibaba.druid.pool.DruidDataSource
 
 
 mybatis:

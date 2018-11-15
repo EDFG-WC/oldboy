@@ -17,6 +17,7 @@ public class TestController6 {
 
   @RequestMapping("/getUser")
   public String findUserById(Model model, @RequestParam Long userId) {
+    System.out.println(userId);
     User user = userMapper.selectByPrimaryKey(userId);
     model.addAttribute("user", user);
     return "userPage";

@@ -114,26 +114,21 @@
         <!--描述存放资源的目录，该路径相对POM路径-->
         <directory>src/main/java</directory>
         <includes>
-          <include>**/*.yml</include>
+          <!--<include>**/*.yml</include>-->
           <include>**/*.xml</include>
-          <include>**/*.properties</include>
+          <!--<include>**/*.properties</include>-->
         </includes>
-        <filtering>false</filtering>
+        <!--<filtering>false</filtering>-->
       </resource>
       <resource>
         <!--描述存放资源的目录，该路径相对POM路径-->
         <directory>src/main/resources</directory>
-        <includes>
+<!--        <includes>
           <include>**/*.yml</include>
           <include>**/*.xml</include>
           <include>**/*.properties</include>
         </includes>
-        <!--<excludes>
-          <exclude>**/*.properties</exclude>
-          <exclude>**/*.xml</exclude>
-          <exclude>**/*.yml</exclude>
-        </excludes>-->
-        <filtering>false</filtering>
+        <filtering>false</filtering>-->
       </resource>
     </resources>
   </build>
