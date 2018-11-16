@@ -38,19 +38,19 @@
     <appender-ref ref="file"/>
   </root>
 
-<!--  &lt;!&ndash;对某个路径下的日志进行设置, name用来指定日志的范围某个类或者某个包, level是日志的输出级别, additivity:是否向上级loger传递打印信息, 默认是true.&ndash;&gt;
-  <logger additivity="false" level="INFO"
-    name="com.boynextdoor.oldfaggot.controller.TestController3">
-    <appender-ref ref="console"/>
-    <appender-ref ref="file"/>
-  </logger>-->
+  <!--  &lt;!&ndash;对某个路径下的日志进行设置, name用来指定日志的范围某个类或者某个包, level是日志的输出级别, additivity:是否向上级loger传递打印信息, 默认是true.&ndash;&gt;
+    <logger additivity="false" level="INFO"
+      name="com.boynextdoor.oldfaggot.controller.TestController3">
+      <appender-ref ref="console"/>
+      <appender-ref ref="file"/>
+    </logger>-->
 
-<!--  &lt;!&ndash; 测试环境+开发环境. &ndash;&gt;
-  <springProfile name="test,dev">
-    <logger level="INFO" name="com.example.demo"/>
-  </springProfile>
-  &lt;!&ndash; 生产环境 &ndash;&gt;
-  <springProfile name="prod">
-    <logger level="ERROR" name="com.example.demo"/>
-  </springProfile>-->
+  <!--  &lt;!&ndash; 测试环境+开发环境. &ndash;&gt;
+    <springProfile name="test,dev">
+      <logger level="INFO" name="com.example.demo"/>
+    </springProfile>
+    &lt;!&ndash; 生产环境 &ndash;&gt;
+    <springProfile name="prod">
+      <logger level="ERROR" name="com.example.demo"/>
+    </springProfile>-->
 </configuration>

@@ -6,25 +6,27 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface AreasMapper {
-    int countByExample(AreasExample example);
 
-    int deleteByExample(AreasExample example);
+	int countByExample(AreasExample example);
 
-    int deleteByPrimaryKey(Integer id);
+	int deleteByExample(AreasExample example);
 
-    int insert(Areas record);
+	int deleteByPrimaryKey(Integer id);
 
-    int insertSelective(Areas record);
+	int insert(Areas record);
 
-    List<Areas> selectByExample(AreasExample example);
+	int insertSelective(Areas record);
 
-    Areas selectByPrimaryKey(Integer id);
+	List<Areas> selectByExample(AreasExample example);
 
-    int updateByExampleSelective(@Param("record") Areas record, @Param("example") AreasExample example);
+	Areas selectByPrimaryKey(Integer id);
 
-    int updateByExample(@Param("record") Areas record, @Param("example") AreasExample example);
+	int updateByExampleSelective(@Param("record") Areas record,
+			@Param("example") AreasExample example);
 
-    int updateByPrimaryKeySelective(Areas record);
+	int updateByExample(@Param("record") Areas record, @Param("example") AreasExample example);
 
-    int updateByPrimaryKey(Areas record);
+	int updateByPrimaryKeySelective(Areas record);
+
+	int updateByPrimaryKey(Areas record);
 }

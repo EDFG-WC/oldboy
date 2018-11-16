@@ -1,43 +1,44 @@
 package com.boynextdoor.oldfaggot.entity;
 
 public class Cities {
-    private Integer id;
 
-    private String cityid;
+	private Integer id;
 
-    private String city;
+	private String cityid;
 
-    private String provinceid;
+	private String city;
 
-    public Integer getId() {
-        return id;
-    }
+	private String provinceid;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public String getCityid() {
-        return cityid;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setCityid(String cityid) {
-        this.cityid = cityid == null ? null : cityid.trim();
-    }
+	public String getCityid() {
+		return cityid;
+	}
 
-    public String getCity() {
-        return city;
-    }
+	public void setCityid(String cityid) {
+		this.cityid = cityid == null ? null : cityid.trim();
+	}
 
-    public void setCity(String city) {
-        this.city = city == null ? null : city.trim();
-    }
+	public String getCity() {
+		return city;
+	}
 
-    public String getProvinceid() {
-        return provinceid;
-    }
+	public void setCity(String city) {
+		this.city = city == null ? null : city.trim();
+	}
 
-    public void setProvinceid(String provinceid) {
-        this.provinceid = provinceid == null ? null : provinceid.trim();
-    }
+	public String getProvinceid() {
+		return provinceid;
+	}
+
+	public void setProvinceid(String provinceid) {
+		this.provinceid = provinceid == null ? null : provinceid.trim();
+	}
 }

@@ -6,25 +6,28 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface TypeTemplateMapper {
-    int countByExample(TypeTemplateExample example);
 
-    int deleteByExample(TypeTemplateExample example);
+	int countByExample(TypeTemplateExample example);
 
-    int deleteByPrimaryKey(Long id);
+	int deleteByExample(TypeTemplateExample example);
 
-    int insert(TypeTemplate record);
+	int deleteByPrimaryKey(Long id);
 
-    int insertSelective(TypeTemplate record);
+	int insert(TypeTemplate record);
 
-    List<TypeTemplate> selectByExample(TypeTemplateExample example);
+	int insertSelective(TypeTemplate record);
 
-    TypeTemplate selectByPrimaryKey(Long id);
+	List<TypeTemplate> selectByExample(TypeTemplateExample example);
 
-    int updateByExampleSelective(@Param("record") TypeTemplate record, @Param("example") TypeTemplateExample example);
+	TypeTemplate selectByPrimaryKey(Long id);
 
-    int updateByExample(@Param("record") TypeTemplate record, @Param("example") TypeTemplateExample example);
+	int updateByExampleSelective(@Param("record") TypeTemplate record,
+			@Param("example") TypeTemplateExample example);
 
-    int updateByPrimaryKeySelective(TypeTemplate record);
+	int updateByExample(@Param("record") TypeTemplate record,
+			@Param("example") TypeTemplateExample example);
 
-    int updateByPrimaryKey(TypeTemplate record);
+	int updateByPrimaryKeySelective(TypeTemplate record);
+
+	int updateByPrimaryKey(TypeTemplate record);
 }

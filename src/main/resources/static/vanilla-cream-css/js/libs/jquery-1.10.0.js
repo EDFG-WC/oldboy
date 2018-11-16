@@ -8697,7 +8697,8 @@
               try {
                 response = conv(response);
               } catch (e) {
-                return {state: "parsererror",
+                return {
+                  state: "parsererror",
                   error: conv ? e : "No conversion from " + prev + " to "
                       + current
                 };

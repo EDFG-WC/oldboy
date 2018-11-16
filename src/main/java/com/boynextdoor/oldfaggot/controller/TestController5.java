@@ -16,38 +16,38 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/test5")
 public class TestController5 {
 
-    @RequestMapping("/jsonTest")
-    @ResponseBody
-    public BasicReturn getBasicReturn() {
-        BasicReturn basicReturn = new BasicReturn();
-        Fucker fucker = new Fucker();
-        fucker.setName("张三");
-        fucker.setAge(29);
-        fucker.setAddress("忠孝东路");
-        basicReturn.setBasicData(fucker);
-        return basicReturn;
-    }
+	@RequestMapping("/jsonTest")
+	@ResponseBody
+	public BasicReturn getBasicReturn() {
+		BasicReturn basicReturn = new BasicReturn();
+		Fucker fucker = new Fucker();
+		fucker.setName("张三");
+		fucker.setAge(29);
+		fucker.setAddress("忠孝东路");
+		basicReturn.setBasicData(fucker);
+		return basicReturn;
+	}
 
-    @RequestMapping("/jsonTest1")
-    public String getBasicReturn(Model model) {
-        BasicReturn basicReturn = new BasicReturn();
-        Fucker fucker = new Fucker();
-        fucker.setName("张三");
-        fucker.setAge(29);
-        fucker.setAddress("忠孝东路");
-        basicReturn.setBasicData(fucker);
-        model.addAttribute("basicReturn", basicReturn);
-        return "test1";
-    }
+	@RequestMapping("/jsonTest1")
+	public String getBasicReturn(Model model) {
+		BasicReturn basicReturn = new BasicReturn();
+		Fucker fucker = new Fucker();
+		fucker.setName("张三");
+		fucker.setAge(29);
+		fucker.setAddress("忠孝东路");
+		basicReturn.setBasicData(fucker);
+		model.addAttribute("basicReturn", basicReturn);
+		return "test1";
+	}
 
-    @RequestMapping("/ajaxTest")
-    public String getAjaxResponse(Model model) {
-        Fucker fucker = new Fucker();
-        fucker.setName("李四");
-        fucker.setAge(18);
-        fucker.setAddress("新疆独山子市");
-        model.addAttribute("user", fucker);
-        return "test1";
-    }
+	@RequestMapping("/ajaxTest")
+	public String getAjaxResponse(Model model) {
+		Fucker fucker = new Fucker();
+		fucker.setName("李四");
+		fucker.setAge(18);
+		fucker.setAddress("新疆独山子市");
+		model.addAttribute("user", fucker);
+		return "test1";
+	}
 
 }

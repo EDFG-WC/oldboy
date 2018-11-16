@@ -6,25 +6,27 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface ItemCatMapper {
-    int countByExample(ItemCatExample example);
 
-    int deleteByExample(ItemCatExample example);
+	int countByExample(ItemCatExample example);
 
-    int deleteByPrimaryKey(Long id);
+	int deleteByExample(ItemCatExample example);
 
-    int insert(ItemCat record);
+	int deleteByPrimaryKey(Long id);
 
-    int insertSelective(ItemCat record);
+	int insert(ItemCat record);
 
-    List<ItemCat> selectByExample(ItemCatExample example);
+	int insertSelective(ItemCat record);
 
-    ItemCat selectByPrimaryKey(Long id);
+	List<ItemCat> selectByExample(ItemCatExample example);
 
-    int updateByExampleSelective(@Param("record") ItemCat record, @Param("example") ItemCatExample example);
+	ItemCat selectByPrimaryKey(Long id);
 
-    int updateByExample(@Param("record") ItemCat record, @Param("example") ItemCatExample example);
+	int updateByExampleSelective(@Param("record") ItemCat record,
+			@Param("example") ItemCatExample example);
 
-    int updateByPrimaryKeySelective(ItemCat record);
+	int updateByExample(@Param("record") ItemCat record, @Param("example") ItemCatExample example);
 
-    int updateByPrimaryKey(ItemCat record);
+	int updateByPrimaryKeySelective(ItemCat record);
+
+	int updateByPrimaryKey(ItemCat record);
 }

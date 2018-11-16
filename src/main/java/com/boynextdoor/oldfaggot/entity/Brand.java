@@ -1,33 +1,34 @@
 package com.boynextdoor.oldfaggot.entity;
 
 public class Brand {
-    private Long id;
 
-    private String name;
+	private Long id;
 
-    private String firstChar;
+	private String name;
 
-    public Long getId() {
-        return id;
-    }
+	private String firstChar;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getFirstChar() {
-        return firstChar;
-    }
+	public void setName(String name) {
+		this.name = name == null ? null : name.trim();
+	}
 
-    public void setFirstChar(String firstChar) {
-        this.firstChar = firstChar == null ? null : firstChar.trim();
-    }
+	public String getFirstChar() {
+		return firstChar;
+	}
+
+	public void setFirstChar(String firstChar) {
+		this.firstChar = firstChar == null ? null : firstChar.trim();
+	}
 }

@@ -1,43 +1,44 @@
 package com.boynextdoor.oldfaggot.entity;
 
 public class ItemCat {
-    private Long id;
 
-    private Long parentId;
+	private Long id;
 
-    private String name;
+	private Long parentId;
 
-    private Long typeId;
+	private String name;
 
-    public Long getId() {
-        return id;
-    }
+	private Long typeId;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public Long getParentId() {
-        return parentId;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setParentId(Long parentId) {
-        this.parentId = parentId;
-    }
+	public Long getParentId() {
+		return parentId;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setParentId(Long parentId) {
+		this.parentId = parentId;
+	}
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
+	public String getName() {
+		return name;
+	}
 
-    public Long getTypeId() {
-        return typeId;
-    }
+	public void setName(String name) {
+		this.name = name == null ? null : name.trim();
+	}
 
-    public void setTypeId(Long typeId) {
-        this.typeId = typeId;
-    }
+	public Long getTypeId() {
+		return typeId;
+	}
+
+	public void setTypeId(Long typeId) {
+		this.typeId = typeId;
+	}
 }

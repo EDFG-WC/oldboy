@@ -6,25 +6,28 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface ProvincesMapper {
-    int countByExample(ProvincesExample example);
 
-    int deleteByExample(ProvincesExample example);
+	int countByExample(ProvincesExample example);
 
-    int deleteByPrimaryKey(Integer id);
+	int deleteByExample(ProvincesExample example);
 
-    int insert(Provinces record);
+	int deleteByPrimaryKey(Integer id);
 
-    int insertSelective(Provinces record);
+	int insert(Provinces record);
 
-    List<Provinces> selectByExample(ProvincesExample example);
+	int insertSelective(Provinces record);
 
-    Provinces selectByPrimaryKey(Integer id);
+	List<Provinces> selectByExample(ProvincesExample example);
 
-    int updateByExampleSelective(@Param("record") Provinces record, @Param("example") ProvincesExample example);
+	Provinces selectByPrimaryKey(Integer id);
 
-    int updateByExample(@Param("record") Provinces record, @Param("example") ProvincesExample example);
+	int updateByExampleSelective(@Param("record") Provinces record,
+			@Param("example") ProvincesExample example);
 
-    int updateByPrimaryKeySelective(Provinces record);
+	int updateByExample(@Param("record") Provinces record,
+			@Param("example") ProvincesExample example);
 
-    int updateByPrimaryKey(Provinces record);
+	int updateByPrimaryKeySelective(Provinces record);
+
+	int updateByPrimaryKey(Provinces record);
 }

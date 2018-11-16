@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class OldboyApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(OldboyApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(OldboyApplication.class, args);
+	}
 }

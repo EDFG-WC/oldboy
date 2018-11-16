@@ -4,163 +4,164 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class SeckillGoods {
-    private Long id;
 
-    private Long goodsId;
+	private Long id;
 
-    private Long itemId;
+	private Long goodsId;
 
-    private String title;
+	private Long itemId;
 
-    private String smallPic;
+	private String title;
 
-    private BigDecimal price;
+	private String smallPic;
 
-    private BigDecimal costPrice;
+	private BigDecimal price;
 
-    private String sellerId;
+	private BigDecimal costPrice;
 
-    private Date createTime;
+	private String sellerId;
 
-    private Date checkTime;
+	private Date createTime;
 
-    private String status;
+	private Date checkTime;
 
-    private Date startTime;
+	private String status;
 
-    private Date endTime;
+	private Date startTime;
 
-    private Integer num;
+	private Date endTime;
 
-    private Integer stockCount;
+	private Integer num;
 
-    private String introduction;
+	private Integer stockCount;
 
-    public Long getId() {
-        return id;
-    }
+	private String introduction;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public Long getGoodsId() {
-        return goodsId;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setGoodsId(Long goodsId) {
-        this.goodsId = goodsId;
-    }
+	public Long getGoodsId() {
+		return goodsId;
+	}
 
-    public Long getItemId() {
-        return itemId;
-    }
+	public void setGoodsId(Long goodsId) {
+		this.goodsId = goodsId;
+	}
 
-    public void setItemId(Long itemId) {
-        this.itemId = itemId;
-    }
+	public Long getItemId() {
+		return itemId;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public void setItemId(Long itemId) {
+		this.itemId = itemId;
+	}
 
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public String getSmallPic() {
-        return smallPic;
-    }
+	public void setTitle(String title) {
+		this.title = title == null ? null : title.trim();
+	}
 
-    public void setSmallPic(String smallPic) {
-        this.smallPic = smallPic == null ? null : smallPic.trim();
-    }
+	public String getSmallPic() {
+		return smallPic;
+	}
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+	public void setSmallPic(String smallPic) {
+		this.smallPic = smallPic == null ? null : smallPic.trim();
+	}
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+	public BigDecimal getPrice() {
+		return price;
+	}
 
-    public BigDecimal getCostPrice() {
-        return costPrice;
-    }
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
 
-    public void setCostPrice(BigDecimal costPrice) {
-        this.costPrice = costPrice;
-    }
+	public BigDecimal getCostPrice() {
+		return costPrice;
+	}
 
-    public String getSellerId() {
-        return sellerId;
-    }
+	public void setCostPrice(BigDecimal costPrice) {
+		this.costPrice = costPrice;
+	}
 
-    public void setSellerId(String sellerId) {
-        this.sellerId = sellerId == null ? null : sellerId.trim();
-    }
+	public String getSellerId() {
+		return sellerId;
+	}
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+	public void setSellerId(String sellerId) {
+		this.sellerId = sellerId == null ? null : sellerId.trim();
+	}
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-    public Date getCheckTime() {
-        return checkTime;
-    }
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 
-    public void setCheckTime(Date checkTime) {
-        this.checkTime = checkTime;
-    }
+	public Date getCheckTime() {
+		return checkTime;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public void setCheckTime(Date checkTime) {
+		this.checkTime = checkTime;
+	}
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public Date getStartTime() {
-        return startTime;
-    }
+	public void setStatus(String status) {
+		this.status = status == null ? null : status.trim();
+	}
 
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
-    }
+	public Date getStartTime() {
+		return startTime;
+	}
 
-    public Date getEndTime() {
-        return endTime;
-    }
+	public void setStartTime(Date startTime) {
+		this.startTime = startTime;
+	}
 
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
-    }
+	public Date getEndTime() {
+		return endTime;
+	}
 
-    public Integer getNum() {
-        return num;
-    }
+	public void setEndTime(Date endTime) {
+		this.endTime = endTime;
+	}
 
-    public void setNum(Integer num) {
-        this.num = num;
-    }
+	public Integer getNum() {
+		return num;
+	}
 
-    public Integer getStockCount() {
-        return stockCount;
-    }
+	public void setNum(Integer num) {
+		this.num = num;
+	}
 
-    public void setStockCount(Integer stockCount) {
-        this.stockCount = stockCount;
-    }
+	public Integer getStockCount() {
+		return stockCount;
+	}
 
-    public String getIntroduction() {
-        return introduction;
-    }
+	public void setStockCount(Integer stockCount) {
+		this.stockCount = stockCount;
+	}
 
-    public void setIntroduction(String introduction) {
-        this.introduction = introduction == null ? null : introduction.trim();
-    }
+	public String getIntroduction() {
+		return introduction;
+	}
+
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction == null ? null : introduction.trim();
+	}
 }

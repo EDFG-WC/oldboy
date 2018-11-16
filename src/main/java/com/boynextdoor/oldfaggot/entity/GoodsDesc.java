@@ -1,73 +1,75 @@
 package com.boynextdoor.oldfaggot.entity;
 
 public class GoodsDesc {
-    private Long goodsId;
 
-    private String introduction;
+	private Long goodsId;
 
-    private String specificationItems;
+	private String introduction;
 
-    private String customAttributeItems;
+	private String specificationItems;
 
-    private String itemImages;
+	private String customAttributeItems;
 
-    private String packageList;
+	private String itemImages;
 
-    private String saleService;
+	private String packageList;
 
-    public Long getGoodsId() {
-        return goodsId;
-    }
+	private String saleService;
 
-    public void setGoodsId(Long goodsId) {
-        this.goodsId = goodsId;
-    }
+	public Long getGoodsId() {
+		return goodsId;
+	}
 
-    public String getIntroduction() {
-        return introduction;
-    }
+	public void setGoodsId(Long goodsId) {
+		this.goodsId = goodsId;
+	}
 
-    public void setIntroduction(String introduction) {
-        this.introduction = introduction == null ? null : introduction.trim();
-    }
+	public String getIntroduction() {
+		return introduction;
+	}
 
-    public String getSpecificationItems() {
-        return specificationItems;
-    }
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction == null ? null : introduction.trim();
+	}
 
-    public void setSpecificationItems(String specificationItems) {
-        this.specificationItems = specificationItems == null ? null : specificationItems.trim();
-    }
+	public String getSpecificationItems() {
+		return specificationItems;
+	}
 
-    public String getCustomAttributeItems() {
-        return customAttributeItems;
-    }
+	public void setSpecificationItems(String specificationItems) {
+		this.specificationItems = specificationItems == null ? null : specificationItems.trim();
+	}
 
-    public void setCustomAttributeItems(String customAttributeItems) {
-        this.customAttributeItems = customAttributeItems == null ? null : customAttributeItems.trim();
-    }
+	public String getCustomAttributeItems() {
+		return customAttributeItems;
+	}
 
-    public String getItemImages() {
-        return itemImages;
-    }
+	public void setCustomAttributeItems(String customAttributeItems) {
+		this.customAttributeItems =
+				customAttributeItems == null ? null : customAttributeItems.trim();
+	}
 
-    public void setItemImages(String itemImages) {
-        this.itemImages = itemImages == null ? null : itemImages.trim();
-    }
+	public String getItemImages() {
+		return itemImages;
+	}
 
-    public String getPackageList() {
-        return packageList;
-    }
+	public void setItemImages(String itemImages) {
+		this.itemImages = itemImages == null ? null : itemImages.trim();
+	}
 
-    public void setPackageList(String packageList) {
-        this.packageList = packageList == null ? null : packageList.trim();
-    }
+	public String getPackageList() {
+		return packageList;
+	}
 
-    public String getSaleService() {
-        return saleService;
-    }
+	public void setPackageList(String packageList) {
+		this.packageList = packageList == null ? null : packageList.trim();
+	}
 
-    public void setSaleService(String saleService) {
-        this.saleService = saleService == null ? null : saleService.trim();
-    }
+	public String getSaleService() {
+		return saleService;
+	}
+
+	public void setSaleService(String saleService) {
+		this.saleService = saleService == null ? null : saleService.trim();
+	}
 }

@@ -3,103 +3,104 @@ package com.boynextdoor.oldfaggot.entity;
 import java.math.BigDecimal;
 
 public class OrderItem {
-    private Long id;
 
-    private Long itemId;
+	private Long id;
 
-    private Long goodsId;
+	private Long itemId;
 
-    private Long orderId;
+	private Long goodsId;
 
-    private String title;
+	private Long orderId;
 
-    private BigDecimal price;
+	private String title;
 
-    private Integer num;
+	private BigDecimal price;
 
-    private BigDecimal totalFee;
+	private Integer num;
 
-    private String picPath;
+	private BigDecimal totalFee;
 
-    private String sellerId;
+	private String picPath;
 
-    public Long getId() {
-        return id;
-    }
+	private String sellerId;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public Long getItemId() {
-        return itemId;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setItemId(Long itemId) {
-        this.itemId = itemId;
-    }
+	public Long getItemId() {
+		return itemId;
+	}
 
-    public Long getGoodsId() {
-        return goodsId;
-    }
+	public void setItemId(Long itemId) {
+		this.itemId = itemId;
+	}
 
-    public void setGoodsId(Long goodsId) {
-        this.goodsId = goodsId;
-    }
+	public Long getGoodsId() {
+		return goodsId;
+	}
 
-    public Long getOrderId() {
-        return orderId;
-    }
+	public void setGoodsId(Long goodsId) {
+		this.goodsId = goodsId;
+	}
 
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
-    }
+	public Long getOrderId() {
+		return orderId;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
+	}
 
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+	public void setTitle(String title) {
+		this.title = title == null ? null : title.trim();
+	}
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+	public BigDecimal getPrice() {
+		return price;
+	}
 
-    public Integer getNum() {
-        return num;
-    }
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
 
-    public void setNum(Integer num) {
-        this.num = num;
-    }
+	public Integer getNum() {
+		return num;
+	}
 
-    public BigDecimal getTotalFee() {
-        return totalFee;
-    }
+	public void setNum(Integer num) {
+		this.num = num;
+	}
 
-    public void setTotalFee(BigDecimal totalFee) {
-        this.totalFee = totalFee;
-    }
+	public BigDecimal getTotalFee() {
+		return totalFee;
+	}
 
-    public String getPicPath() {
-        return picPath;
-    }
+	public void setTotalFee(BigDecimal totalFee) {
+		this.totalFee = totalFee;
+	}
 
-    public void setPicPath(String picPath) {
-        this.picPath = picPath == null ? null : picPath.trim();
-    }
+	public String getPicPath() {
+		return picPath;
+	}
 
-    public String getSellerId() {
-        return sellerId;
-    }
+	public void setPicPath(String picPath) {
+		this.picPath = picPath == null ? null : picPath.trim();
+	}
 
-    public void setSellerId(String sellerId) {
-        this.sellerId = sellerId == null ? null : sellerId.trim();
-    }
+	public String getSellerId() {
+		return sellerId;
+	}
+
+	public void setSellerId(String sellerId) {
+		this.sellerId = sellerId == null ? null : sellerId.trim();
+	}
 }

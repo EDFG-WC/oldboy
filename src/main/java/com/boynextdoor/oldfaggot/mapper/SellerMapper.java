@@ -6,25 +6,27 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface SellerMapper {
-    int countByExample(SellerExample example);
 
-    int deleteByExample(SellerExample example);
+	int countByExample(SellerExample example);
 
-    int deleteByPrimaryKey(String sellerId);
+	int deleteByExample(SellerExample example);
 
-    int insert(Seller record);
+	int deleteByPrimaryKey(String sellerId);
 
-    int insertSelective(Seller record);
+	int insert(Seller record);
 
-    List<Seller> selectByExample(SellerExample example);
+	int insertSelective(Seller record);
 
-    Seller selectByPrimaryKey(String sellerId);
+	List<Seller> selectByExample(SellerExample example);
 
-    int updateByExampleSelective(@Param("record") Seller record, @Param("example") SellerExample example);
+	Seller selectByPrimaryKey(String sellerId);
 
-    int updateByExample(@Param("record") Seller record, @Param("example") SellerExample example);
+	int updateByExampleSelective(@Param("record") Seller record,
+			@Param("example") SellerExample example);
 
-    int updateByPrimaryKeySelective(Seller record);
+	int updateByExample(@Param("record") Seller record, @Param("example") SellerExample example);
 
-    int updateByPrimaryKey(Seller record);
+	int updateByPrimaryKeySelective(Seller record);
+
+	int updateByPrimaryKey(Seller record);
 }

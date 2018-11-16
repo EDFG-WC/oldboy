@@ -6,25 +6,28 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface SeckillGoodsMapper {
-    int countByExample(SeckillGoodsExample example);
 
-    int deleteByExample(SeckillGoodsExample example);
+	int countByExample(SeckillGoodsExample example);
 
-    int deleteByPrimaryKey(Long id);
+	int deleteByExample(SeckillGoodsExample example);
 
-    int insert(SeckillGoods record);
+	int deleteByPrimaryKey(Long id);
 
-    int insertSelective(SeckillGoods record);
+	int insert(SeckillGoods record);
 
-    List<SeckillGoods> selectByExample(SeckillGoodsExample example);
+	int insertSelective(SeckillGoods record);
 
-    SeckillGoods selectByPrimaryKey(Long id);
+	List<SeckillGoods> selectByExample(SeckillGoodsExample example);
 
-    int updateByExampleSelective(@Param("record") SeckillGoods record, @Param("example") SeckillGoodsExample example);
+	SeckillGoods selectByPrimaryKey(Long id);
 
-    int updateByExample(@Param("record") SeckillGoods record, @Param("example") SeckillGoodsExample example);
+	int updateByExampleSelective(@Param("record") SeckillGoods record,
+			@Param("example") SeckillGoodsExample example);
 
-    int updateByPrimaryKeySelective(SeckillGoods record);
+	int updateByExample(@Param("record") SeckillGoods record,
+			@Param("example") SeckillGoodsExample example);
 
-    int updateByPrimaryKey(SeckillGoods record);
+	int updateByPrimaryKeySelective(SeckillGoods record);
+
+	int updateByPrimaryKey(SeckillGoods record);
 }

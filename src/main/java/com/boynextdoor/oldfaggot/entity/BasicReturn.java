@@ -7,41 +7,41 @@ package com.boynextdoor.oldfaggot.entity;
  */
 public class BasicReturn {
 
-    private String errorMSG = "0";
+	private String errorMSG = "0";
 
-    private Object basicData;
+	private Object basicData;
 
-    public BasicReturn() {
-        super();
-    }
+	public BasicReturn() {
+		super();
+	}
 
-    public BasicReturn(String errorMSG, Object basicData) {
-        super();
-        this.errorMSG = errorMSG;
-        this.basicData = basicData;
-    }
+	public BasicReturn(String errorMSG, Object basicData) {
+		super();
+		this.errorMSG = errorMSG;
+		this.basicData = basicData;
+	}
 
-    public String getErrorMSG() {
-        return errorMSG;
-    }
+	public String getErrorMSG() {
+		return errorMSG;
+	}
 
-    public void setErrorMSG(String errorMSG) {
-        this.errorMSG = errorMSG;
-    }
+	public void setErrorMSG(String errorMSG) {
+		this.errorMSG = errorMSG;
+	}
 
-    public Object getBasicData() {
-        return basicData;
-    }
+	public Object getBasicData() {
+		return basicData;
+	}
 
-    public void setBasicData(Object basicData) {
-        this.basicData = basicData;
-    }
+	public void setBasicData(Object basicData) {
+		this.basicData = basicData;
+	}
 
-    @Override
-    public String toString() {
-        return "BasicReturn{" +
-            "errorMSG='" + errorMSG + '\'' +
-            ", basicData=" + basicData +
-            '}';
-    }
+	@Override
+	public String toString() {
+		return "BasicReturn{" +
+				"errorMSG='" + errorMSG + '\'' +
+				", basicData=" + basicData +
+				'}';
+	}
 }

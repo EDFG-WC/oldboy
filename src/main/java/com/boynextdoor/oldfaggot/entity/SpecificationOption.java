@@ -1,53 +1,55 @@
 package com.boynextdoor.oldfaggot.entity;
 
 public class SpecificationOption {
-    private Long id;
 
-    private String name;
+	private Long id;
 
-    private String specIds;
+	private String name;
 
-    private String brandIds;
+	private String specIds;
 
-    private String customAttributeItems;
+	private String brandIds;
 
-    public Long getId() {
-        return id;
-    }
+	private String customAttributeItems;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getSpecIds() {
-        return specIds;
-    }
+	public void setName(String name) {
+		this.name = name == null ? null : name.trim();
+	}
 
-    public void setSpecIds(String specIds) {
-        this.specIds = specIds == null ? null : specIds.trim();
-    }
+	public String getSpecIds() {
+		return specIds;
+	}
 
-    public String getBrandIds() {
-        return brandIds;
-    }
+	public void setSpecIds(String specIds) {
+		this.specIds = specIds == null ? null : specIds.trim();
+	}
 
-    public void setBrandIds(String brandIds) {
-        this.brandIds = brandIds == null ? null : brandIds.trim();
-    }
+	public String getBrandIds() {
+		return brandIds;
+	}
 
-    public String getCustomAttributeItems() {
-        return customAttributeItems;
-    }
+	public void setBrandIds(String brandIds) {
+		this.brandIds = brandIds == null ? null : brandIds.trim();
+	}
 
-    public void setCustomAttributeItems(String customAttributeItems) {
-        this.customAttributeItems = customAttributeItems == null ? null : customAttributeItems.trim();
-    }
+	public String getCustomAttributeItems() {
+		return customAttributeItems;
+	}
+
+	public void setCustomAttributeItems(String customAttributeItems) {
+		this.customAttributeItems =
+				customAttributeItems == null ? null : customAttributeItems.trim();
+	}
 }

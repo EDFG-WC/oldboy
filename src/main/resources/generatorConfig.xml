@@ -24,8 +24,8 @@
     <jdbcConnection
       connectionURL="jdbc:mysql://localhost:3306/pinyougoudb?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true"
       driverClass="com.mysql.jdbc.Driver"
-      userId="root"
-      password="123">
+      password="123"
+      userId="root">
     </jdbcConnection>
 
     <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
@@ -37,7 +37,8 @@
     </javaTypeResolver>
 
     <!-- 生成实体类地址 -->
-    <javaModelGenerator targetPackage="com.boynextdoor.oldfaggot.entity" targetProject="src/main/java">
+    <javaModelGenerator targetPackage="com.boynextdoor.oldfaggot.entity"
+      targetProject="src/main/java">
       <!-- 从数据库返回的值被清理前后的空格 -->
       <property name="trimStrings" value="true"/>
       <!-- enableSubPackages:是否让schema作为包的后缀 -->
@@ -45,13 +46,15 @@
     </javaModelGenerator>
 
     <!-- 生成mapper xml文件 -->
-    <sqlMapGenerator targetPackage="com.boynextdoor.oldfaggot.mapper.xml" targetProject="src/main/java">
+    <sqlMapGenerator targetPackage="com.boynextdoor.oldfaggot.mapper.xml"
+      targetProject="src/main/java">
       <!-- enableSubPackages:是否让schema作为包的后缀 -->
       <property name="enableSubPackages" value="false"/>
     </sqlMapGenerator>
 
     <!-- 生成mapper xml对应Client(接口)-->
-    <javaClientGenerator targetPackage="com.boynextdoor.oldfaggot.mapper" targetProject="src/main/java"
+    <javaClientGenerator targetPackage="com.boynextdoor.oldfaggot.mapper"
+      targetProject="src/main/java"
       type="XMLMAPPER">
       <!-- enableSubPackages:是否让schema作为包的后缀 -->
       <property name="enableSubPackages" value="false"/>

@@ -3,163 +3,164 @@ package com.boynextdoor.oldfaggot.entity;
 import java.math.BigDecimal;
 
 public class Goods {
-    private Long id;
 
-    private String sellerId;
+	private Long id;
 
-    private String goodsName;
+	private String sellerId;
 
-    private Long defaultItemId;
+	private String goodsName;
 
-    private String auditStatus;
+	private Long defaultItemId;
 
-    private String isMarketable;
+	private String auditStatus;
 
-    private Long brandId;
+	private String isMarketable;
 
-    private String caption;
+	private Long brandId;
 
-    private Long category1Id;
+	private String caption;
 
-    private Long category2Id;
+	private Long category1Id;
 
-    private Long category3Id;
+	private Long category2Id;
 
-    private String smallPic;
+	private Long category3Id;
 
-    private BigDecimal price;
+	private String smallPic;
 
-    private Long typeTemplateId;
+	private BigDecimal price;
 
-    private String isEnableSpec;
+	private Long typeTemplateId;
 
-    private String isDelete;
+	private String isEnableSpec;
 
-    public Long getId() {
-        return id;
-    }
+	private String isDelete;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getSellerId() {
-        return sellerId;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setSellerId(String sellerId) {
-        this.sellerId = sellerId == null ? null : sellerId.trim();
-    }
+	public String getSellerId() {
+		return sellerId;
+	}
 
-    public String getGoodsName() {
-        return goodsName;
-    }
+	public void setSellerId(String sellerId) {
+		this.sellerId = sellerId == null ? null : sellerId.trim();
+	}
 
-    public void setGoodsName(String goodsName) {
-        this.goodsName = goodsName == null ? null : goodsName.trim();
-    }
+	public String getGoodsName() {
+		return goodsName;
+	}
 
-    public Long getDefaultItemId() {
-        return defaultItemId;
-    }
+	public void setGoodsName(String goodsName) {
+		this.goodsName = goodsName == null ? null : goodsName.trim();
+	}
 
-    public void setDefaultItemId(Long defaultItemId) {
-        this.defaultItemId = defaultItemId;
-    }
+	public Long getDefaultItemId() {
+		return defaultItemId;
+	}
 
-    public String getAuditStatus() {
-        return auditStatus;
-    }
+	public void setDefaultItemId(Long defaultItemId) {
+		this.defaultItemId = defaultItemId;
+	}
 
-    public void setAuditStatus(String auditStatus) {
-        this.auditStatus = auditStatus == null ? null : auditStatus.trim();
-    }
+	public String getAuditStatus() {
+		return auditStatus;
+	}
 
-    public String getIsMarketable() {
-        return isMarketable;
-    }
+	public void setAuditStatus(String auditStatus) {
+		this.auditStatus = auditStatus == null ? null : auditStatus.trim();
+	}
 
-    public void setIsMarketable(String isMarketable) {
-        this.isMarketable = isMarketable == null ? null : isMarketable.trim();
-    }
+	public String getIsMarketable() {
+		return isMarketable;
+	}
 
-    public Long getBrandId() {
-        return brandId;
-    }
+	public void setIsMarketable(String isMarketable) {
+		this.isMarketable = isMarketable == null ? null : isMarketable.trim();
+	}
 
-    public void setBrandId(Long brandId) {
-        this.brandId = brandId;
-    }
+	public Long getBrandId() {
+		return brandId;
+	}
 
-    public String getCaption() {
-        return caption;
-    }
+	public void setBrandId(Long brandId) {
+		this.brandId = brandId;
+	}
 
-    public void setCaption(String caption) {
-        this.caption = caption == null ? null : caption.trim();
-    }
+	public String getCaption() {
+		return caption;
+	}
 
-    public Long getCategory1Id() {
-        return category1Id;
-    }
+	public void setCaption(String caption) {
+		this.caption = caption == null ? null : caption.trim();
+	}
 
-    public void setCategory1Id(Long category1Id) {
-        this.category1Id = category1Id;
-    }
+	public Long getCategory1Id() {
+		return category1Id;
+	}
 
-    public Long getCategory2Id() {
-        return category2Id;
-    }
+	public void setCategory1Id(Long category1Id) {
+		this.category1Id = category1Id;
+	}
 
-    public void setCategory2Id(Long category2Id) {
-        this.category2Id = category2Id;
-    }
+	public Long getCategory2Id() {
+		return category2Id;
+	}
 
-    public Long getCategory3Id() {
-        return category3Id;
-    }
+	public void setCategory2Id(Long category2Id) {
+		this.category2Id = category2Id;
+	}
 
-    public void setCategory3Id(Long category3Id) {
-        this.category3Id = category3Id;
-    }
+	public Long getCategory3Id() {
+		return category3Id;
+	}
 
-    public String getSmallPic() {
-        return smallPic;
-    }
+	public void setCategory3Id(Long category3Id) {
+		this.category3Id = category3Id;
+	}
 
-    public void setSmallPic(String smallPic) {
-        this.smallPic = smallPic == null ? null : smallPic.trim();
-    }
+	public String getSmallPic() {
+		return smallPic;
+	}
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+	public void setSmallPic(String smallPic) {
+		this.smallPic = smallPic == null ? null : smallPic.trim();
+	}
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+	public BigDecimal getPrice() {
+		return price;
+	}
 
-    public Long getTypeTemplateId() {
-        return typeTemplateId;
-    }
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
 
-    public void setTypeTemplateId(Long typeTemplateId) {
-        this.typeTemplateId = typeTemplateId;
-    }
+	public Long getTypeTemplateId() {
+		return typeTemplateId;
+	}
 
-    public String getIsEnableSpec() {
-        return isEnableSpec;
-    }
+	public void setTypeTemplateId(Long typeTemplateId) {
+		this.typeTemplateId = typeTemplateId;
+	}
 
-    public void setIsEnableSpec(String isEnableSpec) {
-        this.isEnableSpec = isEnableSpec == null ? null : isEnableSpec.trim();
-    }
+	public String getIsEnableSpec() {
+		return isEnableSpec;
+	}
 
-    public String getIsDelete() {
-        return isDelete;
-    }
+	public void setIsEnableSpec(String isEnableSpec) {
+		this.isEnableSpec = isEnableSpec == null ? null : isEnableSpec.trim();
+	}
 
-    public void setIsDelete(String isDelete) {
-        this.isDelete = isDelete == null ? null : isDelete.trim();
-    }
+	public String getIsDelete() {
+		return isDelete;
+	}
+
+	public void setIsDelete(String isDelete) {
+		this.isDelete = isDelete == null ? null : isDelete.trim();
+	}
 }

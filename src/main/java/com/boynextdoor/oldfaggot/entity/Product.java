@@ -9,66 +9,66 @@ import java.util.Date;
  */
 public class Product {
 
-    private int id;
+	private int id;
 
-    private String name;
+	private String name;
 
-    private Double price;
+	private Double price;
 
-    private Date createTime;
+	private Date createTime;
 
-    private String remarks;
+	private String remarks;
 
-    public Product() {
-        super();
-    }
+	public Product() {
+		super();
+	}
 
-    public Product(int id, String name, Double price, Date createTime, String remarks) {
-        super();
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.createTime = createTime;
-        this.remarks = remarks;
-    }
+	public Product(int id, String name, Double price, Date createTime, String remarks) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.createTime = createTime;
+		this.remarks = remarks;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public Double getPrice() {
-        return price;
-    }
+	public Double getPrice() {
+		return price;
+	}
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
+	public void setPrice(Double price) {
+		this.price = price;
+	}
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 
-    public String getRemarks() {
-        return remarks;
-    }
+	public String getRemarks() {
+		return remarks;
+	}
 
-    public void setRemarks(String remarks) {
-        this.remarks = remarks;
-    }
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
+	}
 }

@@ -6,25 +6,27 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface ContentMapper {
-    int countByExample(ContentExample example);
 
-    int deleteByExample(ContentExample example);
+	int countByExample(ContentExample example);
 
-    int deleteByPrimaryKey(Long id);
+	int deleteByExample(ContentExample example);
 
-    int insert(Content record);
+	int deleteByPrimaryKey(Long id);
 
-    int insertSelective(Content record);
+	int insert(Content record);
 
-    List<Content> selectByExample(ContentExample example);
+	int insertSelective(Content record);
 
-    Content selectByPrimaryKey(Long id);
+	List<Content> selectByExample(ContentExample example);
 
-    int updateByExampleSelective(@Param("record") Content record, @Param("example") ContentExample example);
+	Content selectByPrimaryKey(Long id);
 
-    int updateByExample(@Param("record") Content record, @Param("example") ContentExample example);
+	int updateByExampleSelective(@Param("record") Content record,
+			@Param("example") ContentExample example);
 
-    int updateByPrimaryKeySelective(Content record);
+	int updateByExample(@Param("record") Content record, @Param("example") ContentExample example);
 
-    int updateByPrimaryKey(Content record);
+	int updateByPrimaryKeySelective(Content record);
+
+	int updateByPrimaryKey(Content record);
 }

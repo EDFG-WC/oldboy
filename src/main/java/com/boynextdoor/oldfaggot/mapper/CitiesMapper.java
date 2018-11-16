@@ -6,25 +6,27 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface CitiesMapper {
-    int countByExample(CitiesExample example);
 
-    int deleteByExample(CitiesExample example);
+	int countByExample(CitiesExample example);
 
-    int deleteByPrimaryKey(Integer id);
+	int deleteByExample(CitiesExample example);
 
-    int insert(Cities record);
+	int deleteByPrimaryKey(Integer id);
 
-    int insertSelective(Cities record);
+	int insert(Cities record);
 
-    List<Cities> selectByExample(CitiesExample example);
+	int insertSelective(Cities record);
 
-    Cities selectByPrimaryKey(Integer id);
+	List<Cities> selectByExample(CitiesExample example);
 
-    int updateByExampleSelective(@Param("record") Cities record, @Param("example") CitiesExample example);
+	Cities selectByPrimaryKey(Integer id);
 
-    int updateByExample(@Param("record") Cities record, @Param("example") CitiesExample example);
+	int updateByExampleSelective(@Param("record") Cities record,
+			@Param("example") CitiesExample example);
 
-    int updateByPrimaryKeySelective(Cities record);
+	int updateByExample(@Param("record") Cities record, @Param("example") CitiesExample example);
 
-    int updateByPrimaryKey(Cities record);
+	int updateByPrimaryKeySelective(Cities record);
+
+	int updateByPrimaryKey(Cities record);
 }

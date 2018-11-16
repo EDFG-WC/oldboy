@@ -1,73 +1,74 @@
 package com.boynextdoor.oldfaggot.entity;
 
 public class Content {
-    private Long id;
 
-    private Long categoryId;
+	private Long id;
 
-    private String title;
+	private Long categoryId;
 
-    private String url;
+	private String title;
 
-    private String pic;
+	private String url;
 
-    private String status;
+	private String pic;
 
-    private Integer sortOrder;
+	private String status;
 
-    public Long getId() {
-        return id;
-    }
+	private Integer sortOrder;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public Long getCategoryId() {
-        return categoryId;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
-    }
+	public Long getCategoryId() {
+		return categoryId;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
+	}
 
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public String getUrl() {
-        return url;
-    }
+	public void setTitle(String title) {
+		this.title = title == null ? null : title.trim();
+	}
 
-    public void setUrl(String url) {
-        this.url = url == null ? null : url.trim();
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public String getPic() {
-        return pic;
-    }
+	public void setUrl(String url) {
+		this.url = url == null ? null : url.trim();
+	}
 
-    public void setPic(String pic) {
-        this.pic = pic == null ? null : pic.trim();
-    }
+	public String getPic() {
+		return pic;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public void setPic(String pic) {
+		this.pic = pic == null ? null : pic.trim();
+	}
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public Integer getSortOrder() {
-        return sortOrder;
-    }
+	public void setStatus(String status) {
+		this.status = status == null ? null : status.trim();
+	}
 
-    public void setSortOrder(Integer sortOrder) {
-        this.sortOrder = sortOrder;
-    }
+	public Integer getSortOrder() {
+		return sortOrder;
+	}
+
+	public void setSortOrder(Integer sortOrder) {
+		this.sortOrder = sortOrder;
+	}
 }

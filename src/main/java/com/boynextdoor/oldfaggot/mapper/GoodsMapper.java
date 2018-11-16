@@ -6,25 +6,27 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface GoodsMapper {
-    int countByExample(GoodsExample example);
 
-    int deleteByExample(GoodsExample example);
+	int countByExample(GoodsExample example);
 
-    int deleteByPrimaryKey(Long id);
+	int deleteByExample(GoodsExample example);
 
-    int insert(Goods record);
+	int deleteByPrimaryKey(Long id);
 
-    int insertSelective(Goods record);
+	int insert(Goods record);
 
-    List<Goods> selectByExample(GoodsExample example);
+	int insertSelective(Goods record);
 
-    Goods selectByPrimaryKey(Long id);
+	List<Goods> selectByExample(GoodsExample example);
 
-    int updateByExampleSelective(@Param("record") Goods record, @Param("example") GoodsExample example);
+	Goods selectByPrimaryKey(Long id);
 
-    int updateByExample(@Param("record") Goods record, @Param("example") GoodsExample example);
+	int updateByExampleSelective(@Param("record") Goods record,
+			@Param("example") GoodsExample example);
 
-    int updateByPrimaryKeySelective(Goods record);
+	int updateByExample(@Param("record") Goods record, @Param("example") GoodsExample example);
 
-    int updateByPrimaryKey(Goods record);
+	int updateByPrimaryKeySelective(Goods record);
+
+	int updateByPrimaryKey(Goods record);
 }

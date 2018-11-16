@@ -13,40 +13,40 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "pocket")
 public class Fucker {
 
-    private String name;
-    private Integer age;
-    private String address;
+	private String name;
+	private Integer age;
+	private String address;
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public Integer getAge() {
-        return age;
-    }
+	public Integer getAge() {
+		return age;
+	}
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+	public void setAge(Integer age) {
+		this.age = age;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	public String getAddress() {
+		return address;
+	}
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    @Override
-    public String toString() {
-        return "Fucker{" +
-            "name='" + name + '\'' +
-            ", age=" + age +
-            ", address='" + address + '\'' +
-            '}';
-    }
+	@Override
+	public String toString() {
+		return "Fucker{" +
+				"name='" + name + '\'' +
+				", age=" + age +
+				", address='" + address + '\'' +
+				'}';
+	}
 }

@@ -4,123 +4,124 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class SeckillOrder {
-    private Long id;
 
-    private Long seckillId;
+	private Long id;
 
-    private BigDecimal money;
+	private Long seckillId;
 
-    private String userId;
+	private BigDecimal money;
 
-    private String sellerId;
+	private String userId;
 
-    private Date createTime;
+	private String sellerId;
 
-    private Date payTime;
+	private Date createTime;
 
-    private String status;
+	private Date payTime;
 
-    private String receiverAddress;
+	private String status;
 
-    private String receiverMobile;
+	private String receiverAddress;
 
-    private String receiver;
+	private String receiverMobile;
 
-    private String transactionId;
+	private String receiver;
 
-    public Long getId() {
-        return id;
-    }
+	private String transactionId;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public Long getSeckillId() {
-        return seckillId;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setSeckillId(Long seckillId) {
-        this.seckillId = seckillId;
-    }
+	public Long getSeckillId() {
+		return seckillId;
+	}
 
-    public BigDecimal getMoney() {
-        return money;
-    }
+	public void setSeckillId(Long seckillId) {
+		this.seckillId = seckillId;
+	}
 
-    public void setMoney(BigDecimal money) {
-        this.money = money;
-    }
+	public BigDecimal getMoney() {
+		return money;
+	}
 
-    public String getUserId() {
-        return userId;
-    }
+	public void setMoney(BigDecimal money) {
+		this.money = money;
+	}
 
-    public void setUserId(String userId) {
-        this.userId = userId == null ? null : userId.trim();
-    }
+	public String getUserId() {
+		return userId;
+	}
 
-    public String getSellerId() {
-        return sellerId;
-    }
+	public void setUserId(String userId) {
+		this.userId = userId == null ? null : userId.trim();
+	}
 
-    public void setSellerId(String sellerId) {
-        this.sellerId = sellerId == null ? null : sellerId.trim();
-    }
+	public String getSellerId() {
+		return sellerId;
+	}
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+	public void setSellerId(String sellerId) {
+		this.sellerId = sellerId == null ? null : sellerId.trim();
+	}
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-    public Date getPayTime() {
-        return payTime;
-    }
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 
-    public void setPayTime(Date payTime) {
-        this.payTime = payTime;
-    }
+	public Date getPayTime() {
+		return payTime;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public void setPayTime(Date payTime) {
+		this.payTime = payTime;
+	}
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public String getReceiverAddress() {
-        return receiverAddress;
-    }
+	public void setStatus(String status) {
+		this.status = status == null ? null : status.trim();
+	}
 
-    public void setReceiverAddress(String receiverAddress) {
-        this.receiverAddress = receiverAddress == null ? null : receiverAddress.trim();
-    }
+	public String getReceiverAddress() {
+		return receiverAddress;
+	}
 
-    public String getReceiverMobile() {
-        return receiverMobile;
-    }
+	public void setReceiverAddress(String receiverAddress) {
+		this.receiverAddress = receiverAddress == null ? null : receiverAddress.trim();
+	}
 
-    public void setReceiverMobile(String receiverMobile) {
-        this.receiverMobile = receiverMobile == null ? null : receiverMobile.trim();
-    }
+	public String getReceiverMobile() {
+		return receiverMobile;
+	}
 
-    public String getReceiver() {
-        return receiver;
-    }
+	public void setReceiverMobile(String receiverMobile) {
+		this.receiverMobile = receiverMobile == null ? null : receiverMobile.trim();
+	}
 
-    public void setReceiver(String receiver) {
-        this.receiver = receiver == null ? null : receiver.trim();
-    }
+	public String getReceiver() {
+		return receiver;
+	}
 
-    public String getTransactionId() {
-        return transactionId;
-    }
+	public void setReceiver(String receiver) {
+		this.receiver = receiver == null ? null : receiver.trim();
+	}
 
-    public void setTransactionId(String transactionId) {
-        this.transactionId = transactionId == null ? null : transactionId.trim();
-    }
+	public String getTransactionId() {
+		return transactionId;
+	}
+
+	public void setTransactionId(String transactionId) {
+		this.transactionId = transactionId == null ? null : transactionId.trim();
+	}
 }

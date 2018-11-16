@@ -1,43 +1,44 @@
 package com.boynextdoor.oldfaggot.entity;
 
 public class Areas {
-    private Integer id;
 
-    private String areaid;
+	private Integer id;
 
-    private String area;
+	private String areaid;
 
-    private String cityid;
+	private String area;
 
-    public Integer getId() {
-        return id;
-    }
+	private String cityid;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public String getAreaid() {
-        return areaid;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setAreaid(String areaid) {
-        this.areaid = areaid == null ? null : areaid.trim();
-    }
+	public String getAreaid() {
+		return areaid;
+	}
 
-    public String getArea() {
-        return area;
-    }
+	public void setAreaid(String areaid) {
+		this.areaid = areaid == null ? null : areaid.trim();
+	}
 
-    public void setArea(String area) {
-        this.area = area == null ? null : area.trim();
-    }
+	public String getArea() {
+		return area;
+	}
 
-    public String getCityid() {
-        return cityid;
-    }
+	public void setArea(String area) {
+		this.area = area == null ? null : area.trim();
+	}
 
-    public void setCityid(String cityid) {
-        this.cityid = cityid == null ? null : cityid.trim();
-    }
+	public String getCityid() {
+		return cityid;
+	}
+
+	public void setCityid(String cityid) {
+		this.cityid = cityid == null ? null : cityid.trim();
+	}
 }
