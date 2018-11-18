@@ -123,7 +123,7 @@
         </configuration>
       </plugin>
     </plugins>
-    <!--这样做, 只能解决mapper.xml在java目录下的生成问题,但resource下的xml文件就无法被编译到根目录下, 项目还是无法正常使用, 所以应该加一个这样的配置-->
+    <!---->
     <resources>
       <resource>
         <!--把生成的mapper.xml文件包含在项目里-->

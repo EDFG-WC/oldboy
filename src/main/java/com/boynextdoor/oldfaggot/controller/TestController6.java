@@ -4,13 +4,19 @@ import com.alibaba.fastjson.JSONObject;
 import com.boynextdoor.oldfaggot.entity.BasicReturn;
 import com.boynextdoor.oldfaggot.entity.Page;
 import com.boynextdoor.oldfaggot.entity.User;
+import com.boynextdoor.oldfaggot.entity.UserExample;
+import com.boynextdoor.oldfaggot.entity.UserExample.Criteria;
 import com.boynextdoor.oldfaggot.mapper.UserMapper;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/test6")
@@ -28,9 +34,29 @@ public class TestController6 {
 	}
 
 	@RequestMapping("/getUserList")
+	@ResponseBody
 	public BasicReturn getUserList(@RequestBody String param) {
 		BasicReturn basicReturn = new BasicReturn();
 		Page page = JSONObject.parseObject(param, Page.class);
-		
+		PageHelper.startPage(page.getPageNum(), page.getPageSize());
+		UserExample example = new UserExample();
+		Criteria criteria = example.createCriteria();
+		criteria.andStatusIsNotNull();
+		List<User> userList = userMapper.selectByExample(null);
+		//pageInfo是mybatis generator封装的信息
+		PageInfo<User> pageInfo = new PageInfo<>(userList);
+		basicReturn.setBasicData(pageInfo);
+		return basicReturn;
+	}
+
+	@RequestMapping("/initUserPage")
+	public String initUserPage(Model model) {
+		BasicReturn basicReturn = new BasicReturn();
+		PageHelper.startPage(1, 3);
+		List<User> userList = userMapper.selectByExample(null);
+		PageInfo<User> pageInfo = new PageInfo<User>(userList);
+		basicReturn.setBasicData(pageInfo);
+		model.addAttribute("basicReturn", basicReturn);
+		return "userPage2";
 	}
 }

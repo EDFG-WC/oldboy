@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>userPage</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <!-- main JS libs -->
+  <script src="../static/vanilla-cream-css/js/libs/modernizr.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/modernizr.min.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/jquery-1.10.0.js"
+          th:src="@{/vanilla-cream-css/js/libs/jquery-1.10.0.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/jquery-ui.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/jquery-ui.min.js}"></script>
+  <script src="../static/vanilla-cream-css/js/libs/bootstrap.min.js"
+          th:src="@{/vanilla-cream-css/js/libs/bootstrap.min.js}"></script>
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="../static/vanilla-cream-css/css/bootstrap.css"
+        th:href="@{/vanilla-cream-css/css/bootstrap.css}"/>
+<!--  <link rel="stylesheet" href="../static/vanilla-cream-css/style.css"
+        th:href="@{/vanilla-cream-css/style.css}"/>
+  &lt;!&ndash; scripts &ndash;&gt;
+  <script src="../static/vanilla-cream-css/js/general.js"
+          th:src="@{/vanilla-cream-css/js/general.js}"></script>-->
+</head>
+<body>
+<!--<div th:object="${user}">
+  <p th:text="*{username}"></p>
+  <p th:text="*{password}"></p>
+  <p th:text="*{phone}"></p>
+</div>-->
+<table class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>账号</th>
+    <th>密码</th>
+    <th>联系电话</th>
+    <th>状态</th>
+  </tr>
+  <tr th:each="user: ${basicReturn.getBasicData().list}">
+    <td th:text="${user.id}"></td>
+    <td th:text="${user.username}"></td>
+    <td th:text="${user.password}"></td>
+    <td th:text="${user.phone}"></td>
+    <td th:switch="${user.status}">
+      <p th:case="1">已注册</p>
+      <p th:case="0">未注册</p>
+      <p th:case=null>假数据</p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
