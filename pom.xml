@@ -28,7 +28,7 @@
     <mysql.version>5.1.46</mysql.version>
   </properties>
 
-  <!--dependencyManagement标签用于锁定依赖版本, 这里不能用, 用了会出问题-->
+  <!--dependencyManagement标签用于锁定依赖版本, 用于父项目中, 父项目里不包含代码-->
   <!--<dependencyManagement>-->
   <dependencies>
     <!-- Spring Boot web启动器 -->
