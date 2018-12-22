@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mainData>
+  <config>
+    <operate>1</operate>                  <!--0:删除，1:新增，2:修改-->\n" +
+  </config>
+  <dataList type="personnel">
+    <data id="员工主数据主键">            <!--默认主数据代码-->
+      <code></code>                       <!--代码-->
+      <name></name>                       <!--姓名-->
+      <sex></sex>                         <!--性别-->
+      <birthday></birthday>               <!--出生日期-->
+      <education></education>             <!--文化程度-->
+      <idNumber></idNumber>               <!--身份证号码-->
+      <entryDate></entryDate>             <!--入职日期-->
+      <departureDate></departureDate>     <!--离职日期-->
+      <address></address>                 <!--住址-->
+      <phoneNumber></phoneNumber>         <!--电话-->
+      <mobilePhoneNumber></mobilePhoneNumber><!--移动电话-->
+      <email></email>                     <!--电子邮件-->
+      <position></position>               <!--职务-->
+      <maritalStatus></maritalStatus>     <!--婚姻状况-->
+      <partyAffiliation></partyAffiliation><!--政治面貌-->
+      <username></username>               <!--用户名-->
+      <sortNo></sortNo>                   <!--排序号-->
+      <status></status>                   <!--状态-->
+      <department></department>           <!--所属部门-->
+      <company></company>                 <!--所属公司-->
+    </data>
+  </dataList>
+</mainData>
