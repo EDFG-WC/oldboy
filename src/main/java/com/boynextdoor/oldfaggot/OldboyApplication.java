@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
+//扫描mapper文件的注解
 @MapperScan("com.boynextdoor.oldfaggot.mapper")
 @EnableTransactionManagement
 public class OldboyApplication {
