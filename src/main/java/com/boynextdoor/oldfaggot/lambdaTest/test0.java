@@ -3,6 +3,7 @@ package com.boynextdoor.oldfaggot.lambdaTest;
 import com.boynextdoor.oldfaggot.entity.Person;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 /**
  * @Auther: wangc
@@ -81,5 +82,9 @@ public class test0 {
 
 		/*Set<String> nameSet = phpProgrammers.stream().map(Person::getFirstName).collect(Collectors.toSet());
 		nameSet.forEach(System.out::println);*/
+
+		Function<Person, Integer> getSalary = Person::getSalary;
+		//Integer integer = getSalary.apply();
+		Function<Object, Object> identity = Function.identity();
 	}
 }
